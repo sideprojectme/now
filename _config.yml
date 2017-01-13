@@ -1,0 +1,10 @@
+### your site title here
+
+title: Projects
+
+baseurl: /projects
+permalink: /:title
+### exclude the instructions / write-up in the README.md
+
+exclude:
+- README.md

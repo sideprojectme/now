@@ -1,0 +1,14 @@
+---
+---
+[
+  {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "category" : "{{ post.category }}",
+      "image"     : "{{ post.image}}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date }}",
+      "description" : "{{post.description | strip_html | truncate: 160}}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

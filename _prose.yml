@@ -1,0 +1,33 @@
+prose:
+  rooturl: '/'
+#  siteurl: 'http://prose.github.io/starter/'
+#  relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+  media: 'thumbs'
+  ignore:
+
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: ""
+              value: ""
+            - name: ""
+              value: ""
+    _posts/static:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "page"
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          value: ""

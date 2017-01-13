@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="page-container">
+{% if page.image %}
+<header class="page-header" style="background-image: url({{site.baseurl}}/thumbs/{{page.image}})">
+ <!--    <img class="page-image" src="" alt="{{page.title}}"> -->
+</header>
+{% endif %}
+
+<div class="page-content">
+<p><a href="{{site.baseurl}}/">←&nbsp;Home</a></p>
+<h1 class="page-title">{{page.title}}</h1>
+    {% if page.date %}
+        <p class="date">{{ page.date | date: '%B %d, %Y' }}</p>
+    {% endif %}   
+    {% if page.categories %}
+       &nbsp;<strong>Categories:&nbsp;&nbsp;</strong><div class="post-categories">{% if post %}{% assign categories = post.categories %}
+      {% else %}{% assign categories = page.categories %}
+      {% endif %}{% for category in categories %}<a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>{% unless forloop.last %},&nbsp;{% endunless %}{% endfor %}
+    </div>
+    {% endif %}
+    
+{{content}}
+
+
+<footer>
+    <nav class="next-previous-post">
+         {% if page.previous.url %}
+            <p class="nav-previous-post">
+            <a href="{{page.previous.url}}">
+            ←&nbsp;{{page.previous.title}}</a>
+            </p>
+        {% endif %}
+
+        {% if page.next.url %}
+            <p class="nav-next-post">
+            <a href="{{page.next.url}}">
+            {{page.next.title}}&nbsp;→</a>
+            </p>
+        {% endif %}
+    </nav>
+</footer>
+</div>
+</div>

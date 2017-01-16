@@ -163,8 +163,11 @@ img {
 #search-container {
     width: 30%;
     display: inline-block;
+    float: right;
         @include media-query($on-palm) {
          width: 80%;
+         float:none;
+            margin-top: 0.6em;
     }
 }
 
@@ -178,9 +181,10 @@ img {
 .index-header {
     max-width: 75%;
     margin: 1em auto;
-    #search-container {
-        float: right;
-    }
+    @include media-query($on-palm) {
+        text-align: center;
+    } 
+    
 }
 
 .post-categories {

@@ -1,7 +1,7 @@
 ### your site title here
 
 title: Projects
-
+url: https://sideprojectme.github.io
 baseurl: /projects
 permalink: /:title
 ### exclude the instructions / write-up in the README.md

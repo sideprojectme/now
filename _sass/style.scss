@@ -91,6 +91,9 @@ img {
     line-height: 0;
     text-transform: uppercase;
     display: inline-block;
+    a {
+        color: $text-color;
+    }
     @include media-query($on-palm) {
         margin: 0;
         text-align: center;
@@ -160,7 +163,7 @@ img {
 
 
 
-#search-container {
+/* #search-container {
     width: 30%;
     display: inline-block;
     float: right;
@@ -177,7 +180,7 @@ img {
     border: 1px solid #aaa;
     border-radius: 4px;
 }
-
+ */
 .index-header {
     max-width: 75%;
     margin: 1em auto;

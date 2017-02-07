@@ -95,6 +95,8 @@ img {
     }
     @include media-query($on-palm) {
         margin: 0;
+        display: block;
+        font-size: 3em;
         text-align: center;
     }
 }

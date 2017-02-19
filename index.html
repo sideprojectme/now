@@ -11,7 +11,7 @@ layout: default
          {% for post in site.posts %} 
            <a class="post-link-index" href="{{ post.url | prepend: site.baseurl }}">
               <div itemscope itemtype="http://schema.org/TechArticle" class="card">
-                     <img alt="{{ post.title }}" class="post-image-index" itemprop="thumbnailUrl" src="{{site.baseurl}}/thumbs/{{ post.image }}" width="300" height="188" />
+                     <img alt="{{ post.title }}" class="post-image-index" itemprop="thumbnailUrl" src="{{site.baseurl}}/images/{{ post.image }}" width="300" height="188" />
                         <p itemprop="headline" class="post-index-title">{{ post.title }}</p>
                         <div class="card-footer">
                         <p itemprop="description" class="post-excerpt">{{ post.description | truncate: 160 }}</p>

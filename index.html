@@ -1,73 +1,24 @@
 ---
-title: Welcome
+title: Projects
 layout: default
 ---
 <header class="index-header">
-    <h2 style="display: inline-block; color: #477DCA"><a href="/">sideproject&nbsp;</a></h2><h1 class="site-title"><a href="{{site.url}}{{site.baseurl}}">Projects</a></h1>
+    <h2 style="display: inline-block; color: #477DCA; font-weight: 600"><a href="/">sideproject&nbsp;</a></h2><h1 class="site-title"><a href="{{site.url}}{{site.baseurl}}">Projects</a></h1>
 
-   <!--  Html Elements for Search
-    <div id="search-container">
-    <input type="text" id="search-input" placeholder="search..." onkeyup="hide()">
-    </div> -->
 </header>
-
-<!-- <div id="results-container" class="mainbox"></div> -->
-
-<!-- Script pointing to jekyll-search.js
-<script src="{{site.baseurl}}/js/jekyll-search.min.js" type="text/javascript"></script>
-
-<script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  searchResultTemplate: '<a class="post-link-index" href="{url}"><div itemscope itemtype="http://schema.org/TechArticle" class="card"><img alt="{title}" class="post-image-index" itemprop="thumbnailUrl" src="{{site.baseurl}}/thumbs/{image}" width="300" height="188" /><p itemprop="headline" class="post-index-title">{title}</p><div class="card-footer"><p itemprop="description" class="post-excerpt">{description}</p></div></div></a>',        
-  json: '{{site.baseurl}}/search.json',
-})
-</script> -->
 <div id="cont">
-<div class="mainbox">
-     {% for post in site.posts %} 
-       <a class="post-link-index" href="{{ post.url | prepend: site.baseurl }}">
-          <div itemscope itemtype="http://schema.org/TechArticle" class="card">
-                 <img alt="{{ post.title }}" class="post-image-index" itemprop="thumbnailUrl" src="{{site.baseurl}}/thumbs/{{ post.image }}" width="300" height="188" />
-                    <p itemprop="headline" class="post-index-title">{{ post.title }}</p>
-                    <div class="card-footer">
-                    <p itemprop="description" class="post-excerpt">{{ post.description | truncate: 160 }}</p>
-                    </div>
-           
-        </div> 
-     </a>
-      {% endfor %}   
+    <div class="mainbox">
+         {% for post in site.posts %} 
+           <a class="post-link-index" href="{{ post.url | prepend: site.baseurl }}">
+              <div itemscope itemtype="http://schema.org/TechArticle" class="card">
+                     <img alt="{{ post.title }}" class="post-image-index" itemprop="thumbnailUrl" src="{{site.baseurl}}/thumbs/{{ post.image }}" width="300" height="188" />
+                        <p itemprop="headline" class="post-index-title">{{ post.title }}</p>
+                        <div class="card-footer">
+                        <p itemprop="description" class="post-excerpt">{{ post.description | truncate: 160 }}</p>
+                        </div>
+
+            </div> 
+         </a>
+          {% endfor %}   
+     </div>
 </div>
-</div>
-<!-- 
-<script>
-window.hide = function() {
-    var hassome = document.getElementById("search-input").value;
-    if(!hassome){
-    document.getElementById("cont").style.display = "block";
-    }
-    else {
-    document.getElementById("cont").style.display = "none";
-        }
-    }
-</script>
- -->
-
-
-
-<!-- 
-<div id="container" class="cols">
-    {% for post in site.posts %}
-    <div class="box">
-       {% if post.img %}
-          <img class="feat-image" src={{ "/images/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
-       {% endif %}
-          <div class="container">
-            <h2>{{post.title}}</h2>
-            <p>{{post.description}}</p>
-             <div class="action">{{ post.date | date: '%B %d, %Y' }}<a href="{{post.url | prepend: site.baseurl}}">&rarr;</a></div> 
-        </div>   
-    </div>
-   {% endfor %}
-</div> -->

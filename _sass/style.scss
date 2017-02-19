@@ -85,13 +85,14 @@ img {
 }
 
 .site-title {
-    font-size: 2em;
-    color: $text-color;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #333;
     margin-right: 2em;
     line-height: 0;
     display: inline-block;
     a {
-        color: $text-color;
+        color: #333;
     }
     @include media-query($on-palm) {
         margin: 0;
